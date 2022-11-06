@@ -41,7 +41,7 @@ target_include_directories(otel_ngx_module
 )
 target_link_libraries(otel_ngx_module
   PRIVATE
-  ${OPENTELEMETRY_CPP_LIBRARIES}
   gRPC::grpc++
   CURL::libcurl
+  ${OPENTELEMETRY_CPP_LIBRARIES}
 )
