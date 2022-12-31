@@ -178,6 +178,7 @@ defmodule Mix.Tasks.Dockerfiles do
         -DgRPC_BUILD_GRPC_PHP_PLUGIN=OFF \\
         -DgRPC_BUILD_GRPC_PYTHON_PLUGIN=OFF \\
         -DgRPC_BUILD_GRPC_RUBY_PLUGIN=OFF \\
+        -DCMAKE_CXX_STANDARD=17 \\
         ../.. \\
       && make -j2 \\
       && make install
@@ -195,6 +196,7 @@ defmodule Mix.Tasks.Dockerfiles do
         -DWITH_OTLP_HTTP=OFF \\
         -DBUILD_TESTING=OFF \\
         -DWITH_EXAMPLES=OFF \\
+        -DCMAKE_CXX_STANDARD=17 \\
         -DCMAKE_POSITION_INDEPENDENT_CODE=ON \\
         .. \\
       && make -j2 \\
