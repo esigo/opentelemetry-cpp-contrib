@@ -1,8 +1,8 @@
 defmodule Mix.Tasks.Dockerfiles do
   use Mix.Task
 
-  @grpc_version "v1.36.4"
-  @otel_cpp_version "v1.3.0"
+  @grpc_version "v1.49.2"
+  @otel_cpp_version "v1.8.1"
 
   def run([out_dir | combos]) do
     out_dir_abs = Path.expand(out_dir)
