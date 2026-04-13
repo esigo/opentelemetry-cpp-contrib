@@ -181,7 +181,7 @@ jobs:
           cp opentelemetry-cpp-contrib/instrumentation/otel-webserver-module/codeql-env.sh .
           sudo ./codeql-env.sh
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v4
         with:
           languages: cpp
       - name: build
@@ -191,5 +191,5 @@ jobs:
           cp -r /build-dependencies ../otel-webserver-module/
           ./gradlew assembleWebserverModule -DtargetSystem=ubuntu --info
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v4
 
